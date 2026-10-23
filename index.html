@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SDC Vibe 101</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap">
+<style>
+html,body{margin:0;height:100%;background:#000;overflow:hidden}
+#stage{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0}
+section{display:none;position:absolute;left:0;top:0;width:1920px;height:1080px;box-sizing:border-box;overflow:hidden}
+section:not(.on){display:none !important}
+h1,h2,h3,p{margin:0}
+a{color:inherit}
+table{border-collapse:collapse;width:100%}
+th,td{padding:.35em .6em;border-bottom:1px solid #C9CCBF}
+th{font-weight:700}
+#hud{position:fixed;right:16px;bottom:12px;font:14px/1 'JetBrains Mono',monospace;color:#7E8A83;z-index:9}
+</style></head><body>
+<div id="stage">
+<section id="cover" style="background:#0F1411;color:#F4F3EC;font-family:'Space Grotesk', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:48px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:28px;font-weight:700;color:#C6F432;letter-spacing:4px">AI BUILDER FOUNDATION · #1STSDGHACK</p>
+<div style="display:flex;flex-direction:column;gap:32px">
+<h1 style="font-size:136px;font-weight:700;line-height:1.02">Introduction to<br>Vibe Coding</h1>
+<div style="width:160px;height:12px;background:#C6F432"></div>
+<p style="font-size:44px;font-weight:400;color:#F4F3EC">Fri 23 Oct 2026 · 4:00 to 7:00 pm · Google Meet</p>
+</div>
+<p style="font-size:32px;color:#A9B3AC">Fadli Khalid (Pali), Co-founder, KrackedDevs · SDC Hackathon, Xiamen University Malaysia</p>
+
+</section>
+<section id="who" style="background:#F4F3EC;color:#0F1411;font-family:'Space Grotesk', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:36px">
+<div style="display:flex;flex-direction:column;gap:20px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:28px;font-weight:700;color:#4A5A0A;letter-spacing:4px">ABOUT ME</p>
+<h2 style="font-size:80px;font-weight:700;line-height:1.1">Hi, I’m Fadli Khalid.<br>Call me Pali.</h2>
+</div>
+<div style="display:flex;gap:24px;align-items:stretch">
+<div style="flex:1;display:grid;grid-template-columns:1fr 1fr;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px;background:#C6F432;padding:32px 36px;min-height:208px;border:2px solid #0F1411;border-radius:20px">
+<h3 style="font-size:40px;font-weight:700">Now</h3>
+<p style="font-size:30px;line-height:1.35;color:#1B2308">Co-founder at KrackedDevs. I build AI-native products end to end.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#FFFFFF;padding:32px 36px;min-height:208px;border:2px solid #0F1411;border-radius:20px">
+<h3 style="font-size:40px;font-weight:700">Before</h3>
+<p style="font-size:30px;line-height:1.35;color:#3C4640">6+ years in systems engineering, service delivery and project leadership.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#FFFFFF;padding:32px 36px;min-height:208px;border:2px solid #0F1411;border-radius:20px">
+<h3 style="font-size:40px;font-weight:700">Studied</h3>
+<p style="font-size:30px;line-height:1.35;color:#3C4640">UTM: Computer Science (Network &amp; Security), then a Master’s in IT Entrepreneurship.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#FFFFFF;padding:32px 36px;min-height:208px;border:2px solid #0F1411;border-radius:20px">
+<h3 style="font-size:40px;font-weight:700">Teaching</h3>
+<p style="font-size:30px;line-height:1.35;color:#3C4640">Trainer at The AI Builder School, and a mentor at the SDC Hackathon.</p>
+</div>
+</div>
+<img src="img/fadli.jpg" alt="Fadli Khalid" style="width:440px;height:484px;object-fit:cover;border-radius:20px;border:2px solid #0F1411">
+</div>
+<p style="font-size:26px;color:#4A5550">Threads @fadlimdkhalid</p>
+
+</section>
+<section id="portfolio" style="background:#0F1411;color:#F4F3EC;font-family:'Space Grotesk', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+<h2 style="font-size:80px;font-weight:700;line-height:1.1">Things I’ve built and taught</h2>
+<div style="display:flex;gap:24px;height:520px">
+<div style="flex:1;display:flex;flex-direction:column;background:#1A221D;border:1px solid #2C3A31;border-radius:20px;overflow:hidden">
+<img src="img/kd.jpg" alt="KrackedDevs home page" style="width:398px;height:240px;object-fit:cover">
+<div style="display:flex;flex-direction:column;gap:12px;padding:28px">
+<h3 style="font-size:40px;font-weight:700;line-height:1.2;color:#C6F432">KrackedDevs</h3>
+<p style="font-size:28px;line-height:1.35;color:#C9D1CC">3,573 builders and 576 projects shipped.</p>
+<p style="font-size:26px;color:#C6F432"><a href="https://krackeddevs.com">krackeddevs.com</a></p>
+</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;background:#1A221D;border:1px solid #2C3A31;border-radius:20px;overflow:hidden">
+<img src="img/aibs.jpg" alt="AI Builder School home page" style="width:398px;height:240px;object-fit:cover">
+<div style="display:flex;flex-direction:column;gap:12px;padding:28px">
+<h3 style="font-size:40px;font-weight:700;line-height:1.2;color:#C6F432">AI Builder School</h3>
+<p style="font-size:28px;line-height:1.35;color:#C9D1CC">Live classes for Malaysia’s future builders.</p>
+<p style="font-size:26px;color:#C6F432"><a href="https://theaibuilder.school">theaibuilder.school</a></p>
+</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;background:#1A221D;border:1px solid #2C3A31;border-radius:20px;overflow:hidden">
+<img src="img/lembah.jpg" alt="Lembah Bintang title screen" style="width:398px;height:240px;object-fit:cover">
+<div style="display:flex;flex-direction:column;gap:12px;padding:28px">
+<h3 style="font-size:40px;font-weight:700;line-height:1.2;color:#C6F432">Lembah Bintang</h3>
+<p style="font-size:28px;line-height:1.35;color:#C9D1CC">A Malaysian village game in the browser.</p>
+<p style="font-size:26px;color:#C6F432"><a href="https://lembahbintang.app">lembahbintang.app</a></p>
+</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;background:#1A221D;border:1px solid #2C3A31;border-radius:20px;overflow:hidden">
+<img src="img/kuntum.jpg" alt="Kuntum and Embun home page" style="width:398px;height:240px;object-fit:cover">
+<div style="display:flex;flex-direction:column;gap:12px;padding:28px">
+<h3 style="font-size:40px;font-weight:700;line-height:1.2;color:#C6F432">Kuntum &amp; Embun</h3>
+<p style="font-size:28px;line-height:1.35;color:#C9D1CC">AI hiring partners inside WhatsApp and Telegram.</p>
+<p style="font-size:26px;color:#C6F432"><a href="https://kuntum.app">kuntum.app</a></p>
+</div>
+</div>
+</div>
+<p style="font-size:32px;color:#E4E8E5">Also: teaching Foundations as an AIBS trainer, plus client and side projects.</p>
+
+</section>
+<section id="agenda" style="background:#0F1411;color:#F4F3EC;font-family:'Space Grotesk', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<h2 style="font-size:80px;font-weight:700;line-height:1.1">Today, in three hours</h2>
+<div style="display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;gap:32px;align-items:center;background:#1A221D;padding:28px 40px;border-radius:20px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:40px;font-weight:700;color:#C6F432">01</p>
+<h3 style="font-size:44px;font-weight:500">Two ways to build: the shortcut and the proper way</h3>
+</div>
+<div style="display:flex;gap:32px;align-items:center;background:#1A221D;padding:28px 40px;border-radius:20px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:40px;font-weight:700;color:#C6F432">02</p>
+<h3 style="font-size:44px;font-weight:500">KDBM Lite: tools, files and work cards</h3>
+</div>
+<div style="display:flex;gap:32px;align-items:center;background:#1A221D;padding:28px 40px;border-radius:20px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:40px;font-weight:700;color:#C6F432">03</p>
+<h3 style="font-size:44px;font-weight:500">GCCOV: how to talk to the AI</h3>
+</div>
+<div style="display:flex;gap:32px;align-items:center;background:#1A221D;padding:28px 40px;border-radius:20px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:40px;font-weight:700;color:#C6F432">04</p>
+<h3 style="font-size:44px;font-weight:500">A sample project, then your own build</h3>
+</div>
+</div>
+
+</section>
+<section id="sandbox" style="background:#F4F3EC;color:#0F1411;font-family:'Space Grotesk', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+<div style="display:flex;flex-direction:column;gap:24px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:28px;font-weight:700;color:#4A5A0A;letter-spacing:4px">01 · THE SHORTCUT</p>
+<h2 style="font-size:88px;font-weight:700;line-height:1.1">KD Sandbox</h2>
+<p style="font-size:44px;color:#3C4640;line-height:1.3">From an idea to a working app in one sitting. No setup, no code editor.</p>
+</div>
+<div style="display:flex;gap:24px;height:320px">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FFFFFF;padding:40px;border:2px solid #0F1411;border-radius:20px">
+<h3 style="font-size:44px;font-weight:700">Fast</h3>
+<p style="font-size:32px;line-height:1.35;color:#3C4640">A working app you can share by link.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FFFFFF;padding:40px;border:2px solid #0F1411;border-radius:20px">
+<h3 style="font-size:44px;font-weight:700">Guided</h3>
+<p style="font-size:32px;line-height:1.35;color:#3C4640">A coach writes the build prompt for you.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#C6F432;padding:40px;border:2px solid #0F1411;border-radius:20px">
+<h3 style="font-size:44px;font-weight:700">Small</h3>
+<p style="font-size:32px;line-height:1.35;color:#1B2308">A single-page app. Great for a first win.</p>
+</div>
+</div>
+<p style="font-size:36px;font-weight:700">Try it later: <a href="https://krackeddevs.com/sandbox" style="color:#0F1411">krackeddevs.com/sandbox</a></p>
+
+</section>
+<section id="sandbox-how" style="background:#0F1411;color:#F4F3EC;font-family:'Space Grotesk', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+<h2 style="font-size:80px;font-weight:700;line-height:1.1">How the Sandbox works</h2>
+<div style="display:flex;gap:24px;height:384px">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#1A221D;padding:40px;border:1px solid #2C3A31;border-radius:20px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:40px;font-weight:700;color:#C6F432">01</p>
+<h3 style="font-size:40px;font-weight:700;line-height:1.2;min-height:96px">Sign in</h3>
+<p style="font-size:30px;line-height:1.35;color:#C9D1CC">Use your KrackedDevs account.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#1A221D;padding:40px;border:1px solid #2C3A31;border-radius:20px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:40px;font-weight:700;color:#C6F432">02</p>
+<h3 style="font-size:40px;font-weight:700;line-height:1.2;min-height:96px">Pick an idea</h3>
+<p style="font-size:30px;line-height:1.35;color:#C9D1CC">Browse the idea wall, or bring your own.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#1A221D;padding:40px;border:1px solid #2C3A31;border-radius:20px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:40px;font-weight:700;color:#C6F432">03</p>
+<h3 style="font-size:40px;font-weight:700;line-height:1.2;min-height:96px">Get your prompt</h3>
+<p style="font-size:30px;line-height:1.35;color:#C9D1CC">The coach asks a few questions and writes one build prompt.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#1A221D;padding:40px;border:1px solid #2C3A31;border-radius:20px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:40px;font-weight:700;color:#C6F432">04</p>
+<h3 style="font-size:40px;font-weight:700;line-height:1.2;min-height:96px">Build and publish</h3>
+<p style="font-size:30px;line-height:1.35;color:#C9D1CC">Paste it into an AI app builder. Publish and keep the link.</p>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:30px;color:#E4E8E5">AI app builders: Lovable, v0, ILMU Chat, Hostinger Horizons. A free account is needed.</p>
+<p style="font-size:30px;color:#C6F432">Then submit it to the showcase, and it lives on your KrackedDevs profile.</p>
+<p style="font-size:30px;color:#F4F3EC">Open it: <a href="https://krackeddevs.com/sandbox" style="color:#C6F432">krackeddevs.com/sandbox</a></p>
+</div>
+
+</section>
+<section id="two-paths" style="background:#F4F3EC;color:#0F1411;font-family:'Space Grotesk', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:48px">
+<h2 style="font-size:80px;font-weight:700;line-height:1.1">Two ways to build</h2>
+<table style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;color:#0F1411">
+<tr><th style="width:22%;text-align:left"></th><th style="width:39%;text-align:left">KD Sandbox</th><th style="width:39%;text-align:left">KDBM Lite</th></tr>
+<tr><td>Style</td><td>The shortcut</td><td>The proper way</td></tr>
+<tr><td>You write</td><td>An idea, then answer the coach</td><td>Planning files, then small work cards</td></tr>
+<tr><td>You get</td><td>One prompt, one page</td><td>A project you can grow and own</td></tr>
+<tr><td>Best for</td><td>A first win in one sitting</td><td>Anything you want to keep building</td></tr>
+</table>
+<div style="background:#0F1411;color:#F4F3EC;padding:36px 44px;border-radius:20px">
+<p style="font-size:36px;line-height:1.35"><span style="color:#C6F432;font-weight:700">Today we follow KDBM Lite</span> for the whole 3 hours. You can use any other method you prefer.</p>
+</div>
+
+</section>
+<section id="kdbm" style="background:#C6F432;color:#0F1411;font-family:'Space Grotesk', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+<div style="display:flex;flex-direction:column;gap:24px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:28px;font-weight:700;letter-spacing:4px">02 · THE PROPER WAY</p>
+<h2 style="font-size:88px;font-weight:700;line-height:1.1">KDBM Lite</h2>
+<p style="font-size:40px;line-height:1.3">KrackedDevs Build Method Lite: one loop you repeat for every build. We follow it for the whole 3 hours.</p>
+</div>
+<div style="display:flex;gap:24px;height:300px">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#0F1411;color:#F4F3EC;padding:40px;border-radius:20px">
+<h3 style="font-size:56px;font-weight:700;color:#C6F432">Spec</h3>
+<p style="font-size:30px;line-height:1.35;color:#C9D1CC">Say what you’re building.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#0F1411;color:#F4F3EC;padding:40px;border-radius:20px">
+<h3 style="font-size:56px;font-weight:700;color:#C6F432">Build</h3>
+<p style="font-size:30px;line-height:1.35;color:#C9D1CC">AI writes it in small steps.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#0F1411;color:#F4F3EC;padding:40px;border-radius:20px">
+<h3 style="font-size:56px;font-weight:700;color:#C6F432">Check</h3>
+<p style="font-size:30px;line-height:1.35;color:#C9D1CC">You test the result.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#0F1411;color:#F4F3EC;padding:40px;border-radius:20px">
+<h3 style="font-size:56px;font-weight:700;color:#C6F432">Ship</h3>
+<p style="font-size:30px;line-height:1.35;color:#C9D1CC">Put it live, own it.</p>
+</div>
+</div>
+<p style="font-size:32px;font-weight:500">Today we cover Spec, Build and Check. Ship comes in the Build &amp; Ship cohort.</p>
+
+</section>
+<section id="kdbm-tools" style="background:#0F1411;color:#F4F3EC;font-family:'Space Grotesk', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+<h2 style="font-size:80px;font-weight:700;line-height:1.1">Your tools for KDBM Lite</h2>
+<div style="display:flex;gap:24px;height:384px">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#1A221D;padding:40px;border:1px solid #2C3A31;border-radius:20px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:40px;font-weight:700;color:#C6F432">01</p>
+<h3 style="font-size:40px;font-weight:700;line-height:1.2;min-height:96px">VS Code + Kilo Code</h3>
+<p style="font-size:30px;line-height:1.35;color:#C9D1CC">Your editor and your AI agent. Cursor works too.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#1A221D;padding:40px;border:1px solid #2C3A31;border-radius:20px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:40px;font-weight:700;color:#C6F432">02</p>
+<h3 style="font-size:40px;font-weight:700;line-height:1.2;min-height:96px">Node + Git</h3>
+<p style="font-size:30px;line-height:1.35;color:#C9D1CC">Node runs your app. Git saves snapshots of it.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#1A221D;padding:40px;border:1px solid #2C3A31;border-radius:20px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:40px;font-weight:700;color:#C6F432">03</p>
+<h3 style="font-size:40px;font-weight:700;line-height:1.2;min-height:96px">Starter folder</h3>
+<p style="font-size:30px;line-height:1.35;color:#C9D1CC">START_HERE.md, prompts, templates and work cards.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#1A221D;padding:40px;border:1px solid #2C3A31;border-radius:20px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:40px;font-weight:700;color:#C6F432">04</p>
+<h3 style="font-size:40px;font-weight:700;line-height:1.2;min-height:96px">Your KD key</h3>
+<p style="font-size:30px;line-height:1.35;color:#C9D1CC">KrackedDevs pays for the AI. The key tells it you’re you.</p>
+</div>
+</div>
+<p style="font-size:32px;color:#C6F432">Use your own laptop, not a work one. An AI agent reads your files and runs commands.</p>
+
+</section>
+<section id="kdbm-download" style="background:#C6F432;color:#0F1411;font-family:'Space Grotesk', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:28px;font-weight:700;letter-spacing:4px">GET THE STARTER PACK</p>
+<h2 style="font-size:80px;font-weight:700;line-height:1.1">Download KDBM Lite</h2>
+<p style="font-size:36px;line-height:1.3">The same pack the AI Builder School uses. Download it now so you can follow along.</p>
+<p style="background:#0F1411;color:#C6F432;padding:28px 40px;border-radius:20px;font-size:36px;font-weight:700"><a href="https://learn.theaibuilder.school/kit/kdbm-lite-foundations.zip">learn.theaibuilder.school/kit/kdbm-lite-foundations.zip</a></p>
+<div style="display:flex;gap:24px">
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;background:#0F1411;color:#F4F3EC;padding:32px;border-radius:20px">
+<h3 style="font-size:40px;font-weight:700;color:#C6F432">1 · Unzip</h3>
+<p style="font-size:28px;color:#C9D1CC">In Downloads. On Windows, right-click and choose Extract All.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;background:#0F1411;color:#F4F3EC;padding:32px;border-radius:20px">
+<h3 style="font-size:40px;font-weight:700;color:#C6F432">2 · Rename</h3>
+<p style="font-size:28px;color:#C9D1CC">Small letters with dashes, like my-first-app.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;background:#0F1411;color:#F4F3EC;padding:32px;border-radius:20px">
+<h3 style="font-size:40px;font-weight:700;color:#C6F432">3 · Open</h3>
+<p style="font-size:28px;color:#C9D1CC">VS Code, then File, then Open Folder.</p>
+</div>
+</div>
+<p style="font-size:30px;font-weight:500">You should see START_HERE.md in the sidebar. If you see DOWNLOADS instead, you opened the wrong folder.</p>
+
+</section>
+<section id="kdbm-files" style="background:#F4F3EC;color:#0F1411;font-family:'Space Grotesk', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<h2 style="font-size:72px;font-weight:700;line-height:1.1">The files are the truth, not the chat</h2>
+<div style="display:flex;gap:48px;align-items:stretch">
+<div style="width:960px">
+<table style="font-family:'Space Grotesk', Arial, sans-serif;font-size:36px;color:#0F1411">
+<tr><th style="width:42%;text-align:left">File</th><th style="width:58%;text-align:left">What it holds</th></tr>
+<tr><td>project-brief.md</td><td>Who it’s for, scope, goal</td></tr>
+<tr><td>architecture.md</td><td>Stack and structure</td></tr>
+<tr><td>design.md</td><td>Look, mobile, rules</td></tr>
+<tr><td>build-blueprint.md</td><td>The full build spec</td></tr>
+<tr><td>build-status.md</td><td>Where we are, what’s next</td></tr>
+<tr><td>work-cards/</td><td>One small step at a time</td></tr>
+</table>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#0F1411;color:#F4F3EC;padding:44px;border-radius:20px">
+<h3 style="font-size:48px;font-weight:700;color:#C6F432">You stay the owner</h3>
+<p style="font-size:36px;line-height:1.4;color:#E4E8E5">The AI helps with speed. You decide the goal, confirm the plan, test the result and own what ships.</p>
+</div>
+</div>
+
+</section>
+<section id="kdbm-cards" style="background:#F4F3EC;color:#0F1411;font-family:'Space Grotesk', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+<h2 style="font-size:80px;font-weight:700;line-height:1.1">Build in four work cards</h2>
+<div style="display:flex;gap:24px;height:384px">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FFFFFF;padding:40px;border:2px solid #0F1411;border-radius:20px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:40px;font-weight:700;color:#4A5A0A">01</p>
+<h3 style="font-size:40px;font-weight:700;line-height:1.2;min-height:96px">Project skeleton</h3>
+<p style="font-size:30px;line-height:1.35;color:#3C4640">Your app’s name on a page, on your laptop.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FFFFFF;padding:40px;border:2px solid #0F1411;border-radius:20px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:40px;font-weight:700;color:#4A5A0A">02</p>
+<h3 style="font-size:40px;font-weight:700;line-height:1.2;min-height:96px">First visible version</h3>
+<p style="font-size:30px;line-height:1.35;color:#3C4640">It looks like your design, with sample data.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FFFFFF;padding:40px;border:2px solid #0F1411;border-radius:20px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:40px;font-weight:700;color:#4A5A0A">03</p>
+<h3 style="font-size:40px;font-weight:700;line-height:1.2;min-height:96px">Core behaviour</h3>
+<p style="font-size:30px;line-height:1.35;color:#3C4640">The main thing it is for works.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FFFFFF;padding:40px;border:2px solid #0F1411;border-radius:20px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:40px;font-weight:700;color:#4A5A0A">04</p>
+<h3 style="font-size:40px;font-weight:700;line-height:1.2;min-height:96px">Save or polish</h3>
+<p style="font-size:30px;line-height:1.35;color:#3C4640">It survives a refresh, or it’s finished on a phone.</p>
+</div>
+</div>
+<div style="background:#0F1411;color:#F4F3EC;padding:32px 44px;border-radius:20px;display:flex;flex-direction:column;gap:12px">
+<p style="font-size:34px;line-height:1.35"><span style="color:#C6F432;font-weight:700">The cycle:</span> build one card, test it yourself, then reply “continue”, or “fix” with the exact error.</p>
+<p style="font-size:30px;color:#C9D1CC">Card 02 is a good session. Card 03 is an excellent one. Card 04 is the stretch.</p>
+</div>
+
+</section>
+<section id="gccov" style="background:#0F1411;color:#F4F3EC;font-family:'Space Grotesk', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:48px"><div style="display:flex;flex-direction:column;gap:24px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:28px;font-weight:700;color:#C6F432;letter-spacing:4px">03 · TALKING TO THE AI</p>
+<h2 style="font-size:88px;font-weight:700;line-height:1.1">The GCCOV approach</h2>
+<p style="font-size:40px;line-height:1.3;color:#E4E8E5">A way to write every message to the AI. It works in any method, for a whole build or one feature.</p>
+</div>
+<div style="display:flex;gap:24px;height:440px">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#1A221D;padding:36px;border:1px solid #2C3A31;border-radius:20px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:140px;font-weight:700;color:#C6F432;line-height:1.0">G</p>
+<h3 style="font-size:36px;font-weight:700">Goal</h3>
+<p style="font-size:28px;color:#C9D1CC">What should exist when this is done? One sentence.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#1A221D;padding:36px;border:1px solid #2C3A31;border-radius:20px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:140px;font-weight:700;color:#C6F432;line-height:1.0">C</p>
+<h3 style="font-size:36px;font-weight:700">Context</h3>
+<p style="font-size:28px;color:#C9D1CC">Who it’s for and what already exists.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#1A221D;padding:36px;border:1px solid #2C3A31;border-radius:20px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:140px;font-weight:700;color:#C6F432;line-height:1.0">C</p>
+<h3 style="font-size:36px;font-weight:700">Constraint</h3>
+<p style="font-size:28px;color:#C9D1CC">Limits: browser-only, no login, time.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#1A221D;padding:36px;border:1px solid #2C3A31;border-radius:20px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:140px;font-weight:700;color:#C6F432;line-height:1.0">O</p>
+<h3 style="font-size:36px;font-weight:700">Output</h3>
+<p style="font-size:28px;color:#C9D1CC">The shape you want back: files, steps, code.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#1A221D;padding:36px;border:1px solid #2C3A31;border-radius:20px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:140px;font-weight:700;color:#C6F432;line-height:1.0">V</p>
+<h3 style="font-size:36px;font-weight:700">Verify</h3>
+<p style="font-size:28px;color:#C9D1CC">How you will test that it works.</p>
+</div>
+</div>
+
+</section>
+<section id="gccov-kdbm" style="background:#F4F3EC;color:#0F1411;font-family:'Space Grotesk', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:44px">
+<h2 style="font-size:72px;font-weight:700;line-height:1.1">GCCOV inside KDBM Lite</h2>
+<table style="font-family:'Space Grotesk', Arial, sans-serif;font-size:28px;color:#0F1411">
+<tr><th style="width:16%;text-align:left">Where</th><th style="width:40%;text-align:left">KDBM already fixes (Constraint, Output)</th><th style="width:44%;text-align:left">You write</th></tr>
+<tr><td>Spec</td><td>Planning files only. No code, no installs.</td><td>Goal and Context: who it’s for, what “done” looks like.</td></tr>
+<tr><td>Build</td><td>One work card at a time.</td><td>Verify: the card’s test, then “continue” or “fix” with the error.</td></tr>
+<tr><td>Your own method</td><td>You choose.</td><td>All five letters, in every message.</td></tr>
+</table>
+<div style="background:#0F1411;color:#F4F3EC;padding:32px 44px;border-radius:20px">
+<p style="font-size:34px;line-height:1.35"><span style="color:#C6F432;font-weight:700">KDBM’s stage limits win.</span> Never ask for the whole app in one message. Nothing is built until you say “Start Work Card 01”.</p>
+</div>
+
+</section>
+<section id="sample" style="background:#0F1411;color:#F4F3EC;font-family:'Space Grotesk', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+<div style="display:flex;flex-direction:column;gap:20px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:28px;font-weight:700;color:#C6F432;letter-spacing:4px">SAMPLE PROJECT · KDBM STEP 1: SPEC</p>
+<h2 style="font-size:88px;font-weight:700;line-height:1.1">Makan Picker</h2>
+<p style="font-size:36px;line-height:1.3;color:#E4E8E5">A new project, started live from an empty folder. The GCCOV prompt becomes project-brief.md.</p>
+</div>
+<table style="font-family:'Space Grotesk', Arial, sans-serif;font-size:34px;color:#F4F3EC">
+<tr><th style="width:20%;text-align:left;color:#C6F432">GCCOV</th><th style="width:80%;text-align:left;color:#C6F432">What we tell the AI</th></tr>
+<tr><td>Goal</td><td>A page that picks what to eat for lunch.</td></tr>
+<tr><td>Context</td><td>For friends who can never decide.</td></tr>
+<tr><td>Constraint</td><td>One page, browser only, no login, no database.</td></tr>
+<tr><td>Output</td><td>Planning files first. No code yet.</td></tr>
+<tr><td>Verify</td><td>Five taps give different meals. My list survives a refresh.</td></tr>
+</table>
+
+</section>
+<section id="sample-build" style="background:#0F1411;color:#F4F3EC;font-family:'Space Grotesk', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+<div style="display:flex;flex-direction:column;gap:20px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:28px;font-weight:700;color:#C6F432;letter-spacing:4px">KDBM STEPS 2 AND 3: BUILD AND CHECK</p>
+<h2 style="font-size:80px;font-weight:700;line-height:1.1">Makan Picker, in four work cards</h2>
+</div>
+<div style="display:flex;gap:24px;height:384px">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#1A221D;padding:40px;border:1px solid #2C3A31;border-radius:20px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:40px;font-weight:700;color:#C6F432">01</p>
+<h3 style="font-size:40px;font-weight:700;line-height:1.2;min-height:96px">Project skeleton</h3>
+<p style="font-size:30px;line-height:1.35;color:#C9D1CC">“Makan Picker” on a page.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#1A221D;padding:40px;border:1px solid #2C3A31;border-radius:20px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:40px;font-weight:700;color:#C6F432">02</p>
+<h3 style="font-size:40px;font-weight:700;line-height:1.2;min-height:96px">First visible version</h3>
+<p style="font-size:30px;line-height:1.35;color:#C9D1CC">A sample meal list and a Pick button.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#1A221D;padding:40px;border:1px solid #2C3A31;border-radius:20px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:40px;font-weight:700;color:#C6F432">03</p>
+<h3 style="font-size:40px;font-weight:700;line-height:1.2;min-height:96px">Core behaviour</h3>
+<p style="font-size:30px;line-height:1.35;color:#C9D1CC">Pick shows a meal. Five taps, different meals.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#1A221D;padding:40px;border:1px solid #2C3A31;border-radius:20px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:40px;font-weight:700;color:#C6F432">04</p>
+<h3 style="font-size:40px;font-weight:700;line-height:1.2;min-height:96px">Save or polish</h3>
+<p style="font-size:30px;line-height:1.35;color:#C9D1CC">Add my own meals. They survive a refresh.</p>
+</div>
+</div>
+<p style="font-size:32px;color:#C6F432">Each card ends with a test. You run it yourself, then say “continue” or “fix”.</p>
+
+</section>
+<section id="your-turn" style="background:#F4F3EC;color:#0F1411;font-family:'Space Grotesk', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+<div style="display:flex;flex-direction:column;gap:20px">
+<h2 style="font-size:80px;font-weight:700;line-height:1.1">Your turn: build something small and fun</h2>
+<p style="font-size:36px;line-height:1.3;color:#3C4640">Keep it browser-only: no login, no database. A safe first build.</p>
+</div>
+<div style="display:flex;gap:24px;height:320px">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FFFFFF;padding:40px;border:2px solid #0F1411;border-radius:20px">
+<h3 style="font-size:44px;font-weight:700">Pantun maker</h3>
+<p style="font-size:32px;line-height:1.35;color:#3C4640">Pick a theme, get a four-line pantun.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FFFFFF;padding:40px;border:2px solid #0F1411;border-radius:20px">
+<h3 style="font-size:44px;font-weight:700">Reaction game</h3>
+<p style="font-size:32px;line-height:1.35;color:#3C4640">Tap fast, beat your best score.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FFFFFF;padding:40px;border:2px solid #0F1411;border-radius:20px">
+<h3 style="font-size:44px;font-weight:700">Habit tracker</h3>
+<p style="font-size:32px;line-height:1.35;color:#3C4640">Tick off today’s goals, see your streak.</p>
+</div>
+</div>
+<p style="font-size:34px;font-weight:700">Start with Spec: write your Goal in one sentence, then run GCCOV.</p>
+
+</section>
+<section id="links" style="background:#0F1411;color:#F4F3EC;font-family:'Space Grotesk', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<h2 style="font-size:80px;font-weight:700;line-height:1.1">Visit these later</h2>
+<table style="font-family:'Space Grotesk', Arial, sans-serif;font-size:34px;color:#F4F3EC">
+<tr><th style="width:30%;text-align:left;color:#C6F432">What</th><th style="width:70%;text-align:left;color:#C6F432">Link</th></tr>
+<tr><td>KD Sandbox</td><td><a href="https://krackeddevs.com/sandbox">krackeddevs.com/sandbox</a></td></tr>
+<tr><td>AI Builder School</td><td><a href="https://learn.theaibuilder.school">learn.theaibuilder.school</a></td></tr>
+<tr><td>KDBM Lite starter pack</td><td><a href="https://learn.theaibuilder.school/kit/kdbm-lite-foundations.zip">learn.theaibuilder.school/kit/kdbm-lite-foundations.zip</a></td></tr>
+<tr><td>KrackedDevs</td><td><a href="https://krackeddevs.com">krackeddevs.com</a></td></tr>
+<tr><td>Lembah Bintang</td><td><a href="https://lembahbintang.app">lembahbintang.app</a></td></tr>
+<tr><td>Kuntum &amp; Embun</td><td><a href="https://kuntum.app">kuntum.app</a></td></tr>
+</table>
+
+</section>
+<section id="close" style="background:#C6F432;color:#0F1411;font-family:'Space Grotesk', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:48px">
+<h1 style="font-size:128px;font-weight:700;line-height:1.05">Spec. Build.<br>Check. Ship.</h1>
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:56px;font-weight:700">Questions?</p>
+<p style="font-size:32px">theaibuilder.school · learn.theaibuilder.school</p>
+<p style="font-size:32px">Threads @fadlimdkhalid</p>
+</div>
+
+</section>
+</div>
+<div id="hud"></div>
+<script>
+const S=[...document.querySelectorAll('section')],st=document.getElementById('stage'),hud=document.getElementById('hud');
+let i=Math.min(Math.max((parseInt(location.hash.slice(1))||1)-1,0),S.length-1);
+function fit(){const k=Math.min(innerWidth/1920,innerHeight/1080);st.style.transform=`translate(${(innerWidth-1920*k)/2}px,${(innerHeight-1080*k)/2}px) scale(${k})`}
+function show(n){i=Math.min(Math.max(n,0),S.length-1);S.forEach((s,j)=>s.classList.toggle('on',j===i));hud.textContent=(i+1)+' / '+S.length;history.replaceState(null,'','#'+(i+1))}
+addEventListener('resize',fit);
+addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' ','Enter'].includes(e.key)){e.preventDefault();show(i+1)}else if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){e.preventDefault();show(i-1)}else if(e.key==='Home')show(0);else if(e.key==='End')show(S.length-1);else if(e.key==='f')document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()});
+addEventListener('click',e=>{if(e.target.closest('a'))return;show(e.clientX<innerWidth/3?i-1:i+1)});
+let tx=0;addEventListener('touchstart',e=>tx=e.touches[0].clientX);addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>40)show(dx<0?i+1:i-1)});
+fit();show(i);
+</script></body></html>
