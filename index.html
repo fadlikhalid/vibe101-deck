@@ -384,6 +384,50 @@ th{font-weight:700}
 </div>
 
 </section>
+<section id="ai-prompt" style="background:#0F1411;color:#F4F3EC;font-family:'Space Grotesk', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+<h2 style="font-size:72px;font-weight:700;line-height:1.1">Talking to the AI: before and after</h2>
+<div style="display:flex;gap:24px;height:500px">
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#1A221D;padding:40px;border:1px solid #2C3A31;border-radius:20px">
+<h3 style="font-size:40px;font-weight:700;color:#C9D1CC">Vague</h3>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:34px;line-height:1.5;color:#F4F3EC">Make me a lunch app.</p>
+<p style="font-size:30px;line-height:1.35;color:#C9D1CC">The AI has to guess everything: who it’s for, how big it is, what to build and what “done” means.</p>
+</div>
+<div style="flex:1.7;display:flex;flex-direction:column;gap:20px;background:#1A221D;padding:40px;border:2px solid #C6F432;border-radius:20px">
+<h3 style="font-size:40px;font-weight:700;color:#C6F432">With GCCOV</h3>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:28px;line-height:1.55;color:#F4F3EC"><span style="color:#C6F432">Goal:</span> A page that picks what to eat for lunch.<br><span style="color:#C6F432">Context:</span> For me and friends who can never decide.<br><span style="color:#C6F432">Constraint:</span> One page, browser only, no login, no database.<br><span style="color:#C6F432">Output:</span> Planning files only. No code yet.<br><span style="color:#C6F432">Verify:</span> Five taps give different meals. My list survives a refresh.</p>
+</div>
+</div>
+<p style="font-size:32px;color:#C6F432">Five short lines. The AI knows what to build, what not to build, and how you will check it.</p>
+
+</section>
+<section id="ai-flow" style="background:#F4F3EC;color:#0F1411;font-family:'Space Grotesk', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+<h2 style="font-size:72px;font-weight:700;line-height:1.1">Inside KDBM: what you actually type</h2>
+<div style="display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;gap:24px;align-items:stretch">
+<div style="width:220px;background:#0F1411;color:#C6F432;padding:28px 32px;border-radius:20px;font-size:44px;font-weight:700">Spec</div>
+<div style="flex:1;background:#FFFFFF;border:2px solid #0F1411;border-radius:20px;padding:24px 36px;display:flex;flex-direction:column;gap:8px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:32px;font-weight:700">Your GCCOV prompt</p>
+<p style="font-size:28px;color:#3C4640">The coach asks a few questions. Stuck? Reply “choose for me and move on”.</p>
+</div>
+</div>
+<div style="display:flex;gap:24px;align-items:stretch">
+<div style="width:220px;background:#0F1411;color:#C6F432;padding:28px 32px;border-radius:20px;font-size:44px;font-weight:700">Build</div>
+<div style="flex:1;background:#FFFFFF;border:2px solid #0F1411;border-radius:20px;padding:24px 36px;display:flex;flex-direction:column;gap:8px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:32px;font-weight:700">Start Work Card 01</p>
+<p style="font-size:28px;color:#3C4640">Nothing is built until you say this. One card at a time.</p>
+</div>
+</div>
+<div style="display:flex;gap:24px;align-items:stretch">
+<div style="width:220px;background:#0F1411;color:#C6F432;padding:28px 32px;border-radius:20px;font-size:44px;font-weight:700">Check</div>
+<div style="flex:1;background:#FFFFFF;border:2px solid #0F1411;border-radius:20px;padding:24px 36px;display:flex;flex-direction:column;gap:8px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:32px;font-weight:700">continue   or   fix + the exact error</p>
+<p style="font-size:28px;color:#3C4640">Test the card yourself first. Paste the red error word for word.</p>
+</div>
+</div>
+</div>
+<p style="font-size:32px;font-weight:700">Short messages, one step at a time. The files remember the rest.</p>
+
+</section>
 <section id="sample" style="background:#0F1411;color:#F4F3EC;font-family:'Space Grotesk', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
 <div style="display:flex;flex-direction:column;gap:20px">
 <p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:28px;font-weight:700;color:#C6F432;letter-spacing:4px">SAMPLE PROJECT · KDBM STEP 1: SPEC</p>
