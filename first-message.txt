@@ -1,0 +1,20 @@
+Read START_HERE.md and prompts/00-run-kdbm-lite-coach.md.
+
+Run the KDBM Lite Coach exactly as instructed.
+
+Planning phase only:
+- create or update markdown planning files only
+- do not create app code yet
+- do not install packages yet
+- do not edit project source files yet
+
+Start with the Setup Gate.
+Ask me one question at a time.
+
+My idea is below.
+
+Goal: A page that picks what to eat for lunch.
+Context: For me and my friends who can never decide where to eat. We open it on our phones at lunchtime.
+Constraint: One page that runs in the browser only. No login, no database, no backend. Works on a phone.
+Output: Planning files first: brief, architecture, design, blueprint and four work cards. No code until I say "Start Work Card 01".
+Verify: Five taps on Pick give different meals. I can add my own meals and they are still there after a refresh.

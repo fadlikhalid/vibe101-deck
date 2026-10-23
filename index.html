@@ -13,6 +13,8 @@ a{color:inherit}
 table{border-collapse:collapse;width:100%}
 th,td{padding:.35em .6em;border-bottom:1px solid #C9CCBF}
 th{font-weight:700}
+.copy{position:absolute;top:28px;right:28px;font:700 24px 'Space Grotesk',Arial,sans-serif;background:#C6F432;color:#0F1411;border:0;border-radius:12px;padding:10px 22px;cursor:pointer}
+.copy:hover{background:#d9ff5c}
 #hud{position:fixed;right:16px;bottom:12px;font:14px/1 'JetBrains Mono',monospace;color:#7E8A83;z-index:9}
 </style></head><body>
 <div id="stage">
@@ -400,22 +402,33 @@ th{font-weight:700}
 <p style="font-size:32px;color:#C6F432">Five short lines. The AI knows what to build, what not to build, and how you will check it.</p>
 
 </section>
-<section id="first-message" style="background:#0F1411;color:#F4F3EC;font-family:'Space Grotesk', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
-<div style="display:flex;flex-direction:column;gap:16px">
-<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:28px;font-weight:700;color:#C6F432;letter-spacing:4px">YOUR FIRST MESSAGE TO THE COACH</p>
-<h2 style="font-size:64px;font-weight:700;line-height:1.1">Paste these two parts together</h2>
+<section id="first-message" style="background:#0F1411;color:#F4F3EC;font-family:'Space Grotesk', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:32px">
+<h2 style="font-size:64px;font-weight:700;line-height:1.1">Your first message to the coach</h2>
+<div style="display:flex;gap:24px;height:580px">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#1A221D;padding:32px 36px;border:1px solid #2C3A31;border-radius:20px">
+<h3 style="font-size:32px;font-weight:700;color:#C9D1CC">1 · From START_HERE.md, as is</h3>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;line-height:1.45;color:#F4F3EC">Read START_HERE.md and prompts/00-run-kdbm-lite-coach.md.<br>Run the KDBM Lite Coach exactly as instructed.<br>Planning phase only:<br>- create or update markdown planning files only<br>- do not create app code yet<br>- do not install packages yet<br>- do not edit project source files yet<br>Start with the Setup Gate.<br>Ask me one question at a time.</p>
 </div>
-<div style="display:flex;gap:24px;height:470px">
-<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#1A221D;padding:36px 40px;border:1px solid #2C3A31;border-radius:20px">
-<h3 style="font-size:36px;font-weight:700;color:#C9D1CC">1 · From START_HERE.md</h3>
-<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#F4F3EC">Read START_HERE.md and prompts/00-run-kdbm-lite-coach.md.<br>Run the KDBM Lite Coach exactly as instructed.<br>Planning phase only: markdown planning files only, no app code yet.<br>Start with the Setup Gate. Ask me one question at a time.</p>
-</div>
-<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#1A221D;padding:36px 40px;border:2px solid #C6F432;border-radius:20px">
-<h3 style="font-size:36px;font-weight:700;color:#C6F432">2 · Your project, in GCCOV</h3>
-<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:26px;line-height:1.55;color:#F4F3EC"><span style="color:#C6F432">Goal:</span> A page that picks what to eat for lunch.<br><span style="color:#C6F432">Context:</span> For me and friends who can never decide.<br><span style="color:#C6F432">Constraint:</span> One page, browser only, no login, no database.<br><span style="color:#C6F432">Output:</span> Planning files only. No code yet.<br><span style="color:#C6F432">Verify:</span> Five taps give different meals. My list survives a refresh.</p>
+<div style="flex:1.3;display:flex;flex-direction:column;gap:16px;background:#1A221D;padding:32px 36px;border:2px solid #C6F432;border-radius:20px">
+<h3 style="font-size:32px;font-weight:700;color:#C6F432">2 · Your idea, in GCCOV</h3>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;line-height:1.45;color:#F4F3EC">My idea is below.<br><br><span style="color:#C6F432">Goal:</span> A page that picks what to eat for lunch.<br><span style="color:#C6F432">Context:</span> For me and my friends who can never decide where to eat. We open it on our phones at lunchtime.<br><span style="color:#C6F432">Constraint:</span> One page that runs in the browser only. No login, no database, no backend. Works on a phone.<br><span style="color:#C6F432">Output:</span> Planning files first: brief, architecture, design, blueprint and four work cards. No code until I say “Start Work Card 01”.<br><span style="color:#C6F432">Verify:</span> Five taps on Pick give different meals. I can add my own meals and they are still there after a refresh.</p>
 </div>
 </div>
-<p style="font-size:32px;color:#C6F432">Part 1 is the same for everyone. Part 2 is yours: change it to your own idea.</p>
+<p style="font-size:26px;color:#C9D1CC">Copy-paste text: <a href="https://fadlikhalid.github.io/vibe101-deck/first-message.txt" style="color:#C6F432">fadlikhalid.github.io/vibe101-deck/first-message.txt</a></p>
+
+</section>
+<section id="what-next" style="background:#F4F3EC;color:#0F1411;font-family:'Space Grotesk', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:32px">
+<h2 style="font-size:64px;font-weight:700;line-height:1.1">What happens after you send it</h2>
+<table style="font-family:'Space Grotesk', Arial, sans-serif;font-size:28px;color:#0F1411">
+<tr><th style="width:6%;text-align:left">#</th><th style="width:50%;text-align:left">What the coach does</th><th style="width:44%;text-align:left">What you do</th></tr>
+<tr><td>1</td><td>Setup Gate: checks that Node, npm and Git are installed.</td><td>Click Allow on “Permission required”. Paste the versions if it asks.</td></tr>
+<tr><td>2</td><td>Asks about your idea, one question at a time.</td><td>Answer in one line. Stuck? “choose for me and move on”.</td></tr>
+<tr><td>3</td><td>Says what kind of app it is: a content site or a browser tool.</td><td>Reply “yes”, or correct it once.</td></tr>
+<tr><td>4</td><td>Writes project-brief.md, architecture.md, design.md and build-blueprint.md.</td><td>Read each one. Ask for changes before it moves on.</td></tr>
+<tr><td>5</td><td>Writes four work cards in work-cards/, updates build-status.md, then stops.</td><td>Check the four cards make sense.</td></tr>
+<tr><td>6</td><td>Waits. No code is written yet.</td><td>Type “Start Work Card 01” to begin building.</td></tr>
+</table>
+<p style="font-size:30px;font-weight:700">If it writes code early, reply: “Planning phase only, no code yet.”</p>
 
 </section>
 <section id="ai-flow" style="background:#F4F3EC;color:#0F1411;font-family:'Space Grotesk', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
@@ -424,7 +437,7 @@ th{font-weight:700}
 <div style="display:flex;gap:24px;align-items:stretch">
 <div style="width:220px;background:#0F1411;color:#C6F432;padding:28px 32px;border-radius:20px;font-size:44px;font-weight:700">Spec</div>
 <div style="flex:1;background:#FFFFFF;border:2px solid #0F1411;border-radius:20px;padding:24px 36px;display:flex;flex-direction:column;gap:8px">
-<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:32px;font-weight:700">Your first message (previous slide)</p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:32px;font-weight:700">Your first message (two slides back)</p>
 <p style="font-size:28px;color:#3C4640">The coach asks a few questions. Stuck? Reply “choose for me and move on”.</p>
 </div>
 </div>
@@ -548,5 +561,10 @@ addEventListener('resize',fit);
 addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' ','Enter'].includes(e.key)){e.preventDefault();show(i+1)}else if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){e.preventDefault();show(i-1)}else if(e.key==='Home')show(0);else if(e.key==='End')show(S.length-1);else if(e.key==='f')document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()});
 addEventListener('click',e=>{if(e.target.closest('a'))return;show(e.clientX<innerWidth/3?i-1:i+1)});
 let tx=0;addEventListener('touchstart',e=>tx=e.touches[0].clientX);addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>40)show(dx<0?i+1:i-1)});
+function txt(p){const d=document.createElement('div');d.innerHTML=p.innerHTML.replace(/<br\s*\/?>/gi,'\n');return d.textContent}
+function copyText(t){return (navigator.clipboard&&window.isSecureContext?navigator.clipboard.writeText(t):Promise.reject()).catch(()=>{const a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();document.execCommand('copy');a.remove()})}
+function addCopy(card,getText,label){card.style.position='relative';const b=document.createElement('button');b.className='copy';b.textContent=label||'Copy';b.addEventListener('click',e=>{e.stopPropagation();copyText(getText()).then(()=>{b.textContent='Copied ✓';setTimeout(()=>b.textContent=label||'Copy',1600)})});card.appendChild(b)}
+document.querySelectorAll('#first-message p, #ai-prompt p').forEach(p=>{if(!/JetBrains/.test(p.getAttribute('style')||'')||txt(p).length<40)return;addCopy(p.parentElement,()=>txt(p).trim())});
+(function(){const sec=document.getElementById('first-message');if(!sec)return;const ps=[...sec.querySelectorAll('p')].filter(p=>/JetBrains/.test(p.getAttribute('style')||'')&&txt(p).length>40);if(ps.length<2)return;const b=document.createElement('button');b.className='copy';b.style.top='auto';b.style.bottom='64px';b.style.right='128px';b.textContent='Copy both';b.addEventListener('click',e=>{e.stopPropagation();copyText(ps.map(p=>txt(p).trim()).join('\n\n')).then(()=>{b.textContent='Copied ✓';setTimeout(()=>b.textContent='Copy both',1600)})});sec.appendChild(b)})();
 fit();show(i);
 </script></body></html>
